@@ -1,3 +1,5 @@
+package week2;
+
 public class WeekTwo {
     public static void main(String[] args) {
 
