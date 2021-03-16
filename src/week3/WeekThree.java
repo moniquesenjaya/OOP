@@ -1,6 +1,6 @@
-package week2;
+package week3;
 
-public class WeekTwo {
+public class WeekThree {
     public static void main(String[] args) {
 
         //IF AND ELIF AND ELSE

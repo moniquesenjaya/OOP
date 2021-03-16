@@ -1,4 +1,4 @@
-package week2;
+package week3;
 
 import javax.annotation.processing.SupportedSourceVersion;
 import java.util.Scanner;

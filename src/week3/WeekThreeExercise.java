@@ -1,6 +1,8 @@
+package week3;
+
 import java.util.Scanner;
 
-public class WeekTwoExercise {
+public class WeekThreeExercise {
     public static void main(String[] args) {
 
         //Number 1
