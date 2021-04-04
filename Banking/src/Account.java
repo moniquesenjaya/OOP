@@ -11,19 +11,27 @@ public class Account {
     }
 
     public boolean deposit(double amt){
-        this.balance += amt;
-        return true;
-    }
-
-    public boolean withdraw(double amt){
-        if (this.balance >= amt)
-        {
-            this.balance -= amt;
+        if (amt > 0){
+            this.balance += amt;
             return true;
-        } else
+        }else
         {
             return false;
         }
+    }
 
+    public boolean withdraw(double amt){
+        if (amt > 0){
+            if (this.balance >= amt)
+            {
+                this.balance -= amt;
+                return true;
+            } else
+            {
+                return false;
+            }
+        }else{
+            return false;
+        }
     }
 }

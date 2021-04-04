@@ -25,7 +25,7 @@ public class Customer {
         this.account = account;
     }
 
-    public String getString(){
+    public String toString(){
         return "Name: " + this.getFirstName() + " " + this.getLastName() + ", Balance: " + this.getAccount().getBalance();
     }
 

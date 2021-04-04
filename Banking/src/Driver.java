@@ -34,7 +34,7 @@ public class Driver {
                         System.out.println("====================");
                         for (int i = 0; i < bank.getNumOfCustomers(); i++){
                             System.out.print((i+1) + ". ");
-                            System.out.println(bank.getCustomer(i).getString());
+                            System.out.println(bank.getCustomer(i));
                         }
                     }else{
                         System.out.println("No customer added yet.");
@@ -49,7 +49,7 @@ public class Driver {
                         sc.nextLine();
                         //get the details of a customer using index - 1 because the display starts from 1
                         Customer accCustomer = bank.getCustomer(num-1);
-                        System.out.println("What to do in " + accCustomer.getString() + " bank.");
+                        System.out.println("What to do in " + accCustomer + " bank.");
                         System.out.println("1. Withdraw");
                         System.out.println("2. Deposit");
                         System.out.print("Your choice: ");
@@ -66,15 +66,19 @@ public class Driver {
                                 if (check) {
                                     System.out.println("New balance: " + accCustomer.getAccount().getBalance());
                                 } else {
-                                    System.out.println("Balance not enough.");
+                                    System.out.println("Balance not enough or input is negative.");
                                 }
                             }
                             case 2 -> {
                                 System.out.print("Enter the value to deposit: ");
                                 double amtD = sc.nextDouble();
                                 sc.nextLine();
-                                accCustomer.getAccount().deposit(amtD);
-                                System.out.println("New balance: " + accCustomer.getAccount().getBalance());
+                                boolean check = accCustomer.getAccount().deposit(amtD);
+                                if (check) {
+                                    System.out.println("New balance: " + accCustomer.getAccount().getBalance());
+                                } else {
+                                    System.out.println("Input cannot be less than 0.");
+                                }
                             }
                             default -> System.out.println("Invalid input.");
                         }
