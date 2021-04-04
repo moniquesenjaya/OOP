@@ -6,6 +6,8 @@ public class Driver {
         Scanner sc = new Scanner(System.in);
         Bank bank = new Bank("Cool Bank");
         System.out.println("Welcome to " + bank.getBankName());
+
+        //While loop for the menu
         while (true){
 
             menu();
@@ -13,6 +15,7 @@ public class Driver {
             sc.nextLine();
             System.out.println();
 
+            //Switch cases depending on the choice that is made
             switch(choice) {
                 case 1:
                     System.out.println("New customer details");
@@ -20,10 +23,12 @@ public class Driver {
                     String fName = sc.nextLine();
                     System.out.print("Enter customer's last name: ");
                     String lName = sc.nextLine();
+                    //adds customer into list of customers in bank class
                     bank.addCustomer(fName, lName);
                     System.out.println(fName + " " + lName + " has been added as a new customer.");
                     break;
                 case 2:
+                    //Makes sure customer number is not 0
                     if (bank.getNumOfCustomers() != 0){
                         System.out.println("Customer List");
                         System.out.println("====================");
@@ -37,10 +42,12 @@ public class Driver {
                     System.out.println();
                     break;
                 case 3:
+                    //Make sure customer is not equal 0
                     if (bank.getNumOfCustomers() != 0){
                         System.out.print("Input customer number: ");
                         int num = sc.nextInt();
                         sc.nextLine();
+                        //get the details of a customer using index - 1 because the display starts from 1
                         Customer accCustomer = bank.getCustomer(num-1);
                         System.out.println("What to do in " + accCustomer.getString() + " bank.");
                         System.out.println("1. Withdraw");
@@ -48,12 +55,14 @@ public class Driver {
                         System.out.print("Your choice: ");
                         int acc = sc.nextInt();
                         sc.nextLine();
+                        //Another switch case to deal with the choice that is made
                         switch (acc) {
                             case 1 -> {
                                 System.out.print("Enter the value to withdraw: ");
                                 double amtW = sc.nextDouble();
                                 sc.nextLine();
                                 boolean check = accCustomer.getAccount().withdraw(amtW);
+                                //checks if the method returns true or false (successful or failed)
                                 if (check) {
                                     System.out.println("New balance: " + accCustomer.getAccount().getBalance());
                                 } else {
@@ -74,6 +83,7 @@ public class Driver {
                     }
                     break;
                 case 4:
+                    //Exits the program
                     System.exit(0);
                     break;
                 default:
