@@ -1,4 +1,4 @@
-package week8;
+package week9;
 
 public class AscendedStaticDynamic {
     public static void main(String[] args) {
