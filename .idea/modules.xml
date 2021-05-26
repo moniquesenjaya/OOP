@@ -3,10 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Banking/Banking.iml" filepath="$PROJECT_DIR$/Banking/Banking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Class Model/Class Model.iml" filepath="$PROJECT_DIR$/Class Model/Class Model.iml" />
       <module fileurl="file://$PROJECT_DIR$/ForumWeek9/ForumWeek9.iml" filepath="$PROJECT_DIR$/ForumWeek9/ForumWeek9.iml" />
       <module fileurl="file://$PROJECT_DIR$/Inheritance/Inheritance.iml" filepath="$PROJECT_DIR$/Inheritance/Inheritance.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/OOP.iml" filepath="$PROJECT_DIR$/.idea/OOP.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOP TA/OOP TA.iml" filepath="$PROJECT_DIR$/OOP TA/OOP TA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/interface/interface.iml" filepath="$PROJECT_DIR$/interface/interface.iml" />
     </modules>
   </component>
 </project>

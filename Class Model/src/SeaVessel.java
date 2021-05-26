@@ -1,0 +1,3 @@
+interface SeaVessel {
+    void launch();
+}

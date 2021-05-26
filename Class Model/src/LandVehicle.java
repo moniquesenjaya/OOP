@@ -1,0 +1,3 @@
+interface LandVehicle {
+    void drive();
+}
