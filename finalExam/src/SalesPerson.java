@@ -19,12 +19,19 @@ class SalesPerson {
         salesHistory[count] = s;
         count = count +1;
     }
-//    public double calcTotalSales(){
-// calculates total sales for the salesperson
-// code missing
-//    }
+    public double calcTotalSales()
+    {
+        double totalSales = 0;
+        for (int i = 0; i < count; i++)
+        {
+            totalSales = totalSales + salesHistory[i].getValue() * salesHistory[i].getQuantity();
+        }
+        return totalSales;
+    }
 //    public Sales largestSale(){
 // calculates the sale with the largest value
 // code missing
 //    }
+
+
 }
